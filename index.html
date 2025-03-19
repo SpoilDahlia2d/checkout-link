@@ -2,21 +2,40 @@
 <html>
 <head>
     <title>Open Your Mind</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 30px 60px;
+            font-size: 32px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Benvenuto!</h1>
-    <p>Quando sei pronto, clicca qui sotto:</p>
-
-    <button onclick="apriPagine()" style="
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        font-size: 20px;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s;">
-        Open Your Mind
+    <button onclick="apriPagine()">
+        CLICK AND OPEN YOUR MIND
     </button>
 
     <audio id="audioPlayer">
@@ -41,4 +60,3 @@
     </script>
 </body>
 </html>
-
