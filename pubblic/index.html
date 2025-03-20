@@ -57,19 +57,25 @@
 
     <script>
         function apriPagine() {
-            const audio = document.getElementById('audioPlayer');
-            audio.play();
+    const audio = document.getElementById('audioPlayer');
+    audio.play();
 
-            const urls = [ 
-                'https://docs.google.com/forms/d/e/1FAIpQLSeLbCsCXVwF1Fc9SBvQMuU7xWOIHnZq_5aao98eBn6ArAxKKw/viewform',
-                'https://throne.com/dahliastar/item/cafd7438-a896-4f57-bebb-4729abfd715f'
-            ];
-            urls.forEach((url, index) => {
-                setTimeout(() => {
-                    window.open(url, '_blank');
-                }, index * 500); // 500ms di ritardo tra le aperture per evitare blocchi
-            });
-        }
+    const urls = [
+        'https://throne.com/dahliastar/item/cafd7438-a896-4f57-bebb-4729abfd715f', 
+        'https://docs.google.com/forms/d/e/1FAIpQLSeLbCsCXVwF1Fc9SBvQMuU7xWOIHnZq_5aao98eBn6ArAxKKw/viewform'
+    ];
+
+    // Aggiungi un log per verificare se il codice viene eseguito
+    console.log("Funzione apriPagine eseguita!");
+
+    urls.forEach((url, index) => {
+        setTimeout(() => {
+            console.log("Aprendo URL: " + url); // Verifica quale URL viene aperto
+            window.open(url, '_blank');
+        }, index * 500); // 500ms di ritardo tra le aperture
+    });
+}
+
     </script>
 </body>
 </html>
