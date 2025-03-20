@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Your Mind and Thank You for 1000 Followers</title>
     <style>
         body {
@@ -13,6 +15,13 @@
             height: 100vh;
             margin: 0;
             text-align: center;
+            flex-direction: column; /* Centra tutto verticalmente */
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
 
         button {
@@ -34,8 +43,11 @@
     </style>
 </head>
 <body>
+
+    <h1>Open Your Mind and Thank You for 1000 Followers</h1>
+
     <button onclick="apriPagine()">
-        CLICK AND OPEN YOUR MIND and THANK YOU FOR 1000FOLLOWER
+        CLICK AND OPEN YOUR MIND
     </button>
 
     <audio id="audioPlayer">
@@ -45,22 +57,19 @@
 
     <script>
         function apriPagine() {
-    console.log("Funzione apriPagine eseguita!"); // Log di debug
-    const audio = document.getElementById('audioPlayer');
-    audio.play();
+            const audio = document.getElementById('audioPlayer');
+            audio.play();
 
-    const urls = [
-        'https://throne.com/dahliastar/item/cafd7438-a896-4f57-bebb-4729abfd715f', 
-        'https://docs.google.com/forms/d/e/1FAIpQLSeLbCsCXVwF1Fc9SBvQMuU7xWOIHnZq_5aao98eBn6ArAxKKw/viewform'
-    ];
-
-    urls.forEach((url, index) => {
-        setTimeout(() => {
-            console.log("Aprendo la URL:", url); // Log di debug
-            window.open(url, '_blank');
-        }, index * 500); // 500ms di ritardo tra le aperture per evitare blocchi
-    });
-}
+            const urls = [ 
+                'https://docs.google.com/forms/d/e/1FAIpQLSeLbCsCXVwF1Fc9SBvQMuU7xWOIHnZq_5aao98eBn6ArAxKKw/viewform',
+                'https://throne.com/dahliastar/item/cafd7438-a896-4f57-bebb-4729abfd715f'
+            ];
+            urls.forEach((url, index) => {
+                setTimeout(() => {
+                    window.open(url, '_blank');
+                }, index * 500); // 500ms di ritardo tra le aperture per evitare blocchi
+            });
+        }
     </script>
 </body>
 </html>
