@@ -45,20 +45,22 @@
 
     <script>
         function apriPagine() {
-            const audio = document.getElementById('audioPlayer');
-            audio.play();
+    console.log("Funzione apriPagine eseguita!"); // Log di debug
+    const audio = document.getElementById('audioPlayer');
+    audio.play();
 
-            const urls = [
-                'https://throne.com/dahliastar/item/cafd7438-a896-4f57-bebb-4729abfd715f', 
-                'https://docs.google.com/forms/d/1i2aw35c6DmQ3lf1lA30q7sOXe1CbFOxCXPj6cOs54XE/' // Inserisci il link completo qui
-            ];
+    const urls = [
+        'https://throne.com/dahliastar/item/cafd7438-a896-4f57-bebb-4729abfd715f', 
+        'https://docs.google.com/forms/d/e/1FAIpQLSeLbCsCXVwF1Fc9SBvQMuU7xWOIHnZq_5aao98eBn6ArAxKKw/viewform'
+    ];
 
-            urls.forEach((url, index) => {
-                setTimeout(() => {
-                    window.open(url, '_blank');
-                }, index * 500); // 500ms di ritardo tra le aperture per evitare blocchi
-            });
-        }
+    urls.forEach((url, index) => {
+        setTimeout(() => {
+            console.log("Aprendo la URL:", url); // Log di debug
+            window.open(url, '_blank');
+        }, index * 500); // 500ms di ritardo tra le aperture per evitare blocchi
+    });
+}
     </script>
 </body>
 </html>
