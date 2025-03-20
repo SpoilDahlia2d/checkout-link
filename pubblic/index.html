@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Open Your Mind</title>
+    <title>Open Your Mind and Thank You for 1000 Followers</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 30px 60px;
+            font-size: 32px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Benvenuto!</h1>
-    <p>Quando sei pronto, clicca qui sotto:</p>
-
-    <button onclick="apriPagine()" style="
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        font-size: 20px;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s;">
-        Open Your Mind
+    <button onclick="apriPagine()">
+        CLICK AND OPEN YOUR MIND
     </button>
 
     <audio id="audioPlayer">
@@ -30,15 +49,16 @@
             audio.play();
 
             const urls = [
-                'https://tinyurl.com/ycy4zzch', 
-                'https://tinyurl.com/4khe4xhd',
+                'https://throne.com/dahliastar/item/cafd7438-a896-4f57-bebb-4729abfd715f', 
+                'https://docs.google.com/forms/d/e/1FAIpQLSeLbCsCXVwF1Fc9SBvQMuU7xWOIHnZq_5aao98eBn6ArAxKKw/viewform?usp=dialog' // Inserisci il link completo qui
             ];
 
-            urls.forEach(url => {
-                window.open(url, '_blank');
+            urls.forEach((url, index) => {
+                setTimeout(() => {
+                    window.open(url, '_blank');
+                }, index * 500); // 500ms di ritardo tra le aperture per evitare blocchi
             });
         }
     </script>
 </body>
 </html>
-
