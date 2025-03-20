@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Open Your Mind and Thanky You for 1000 Follower</title>
+    <title>Open Your Mind and Thank You for 1000 Followers</title>
     <style>
         body {
             background-color: #000;
@@ -50,11 +50,13 @@
 
             const urls = [
                 'https://throne.com/dahliastar/item/cafd7438-a896-4f57-bebb-4729abfd715f', 
-                'https://forms.gle/Cm49sgr3jQDHjMiL8',
+                'https://docs.google.com/forms/d/e/1FAIpQLSeLbCsCXVwF1Fc9SBvQMuU7xWOIHnZq_5aao98eBn6ArAxKKw/viewform?usp=dialog' // Inserisci il link completo qui
             ];
 
-            urls.forEach(url => {
-                window.open(url, '_blank');
+            urls.forEach((url, index) => {
+                setTimeout(() => {
+                    window.open(url, '_blank');
+                }, index * 500); // 500ms di ritardo tra le aperture per evitare blocchi
             });
         }
     </script>
